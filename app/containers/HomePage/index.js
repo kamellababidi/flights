@@ -11,7 +11,7 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
-
+import { Container, Row, Col } from 'react-bootstrap';
 import { useInjectReducer } from 'utils/injectReducer';
 import { useInjectSaga } from 'utils/injectSaga';
 import {
@@ -19,20 +19,14 @@ import {
   makeSelectLoading,
   makeSelectError,
 } from 'containers/App/selectors';
-import H2 from 'components/H2';
-import ReposList from 'components/ReposList';
-import AtPrefix from './AtPrefix';
-import CenteredSection from './CenteredSection';
-import Form from './Form';
-import Input from './Input';
-import Section from './Section';
-import messages from './messages';
+import Header from 'components/Header';
+import SearchBtn from 'components/SearchBtn';
 import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-
+import './_home.css';
 const key = 'home';
 
 export function HomePage({
@@ -58,9 +52,14 @@ export function HomePage({
   };
 
   return (
-    <article>
-
-    </article>
+    <Container className='container' fluid={true}>
+      <Header/>
+      <Row className='flightSearchContainer'>
+        <div className='btn-container'>
+          <SearchBtn/>
+        </div>
+      </Row>
+    </Container>
   );
 }
 

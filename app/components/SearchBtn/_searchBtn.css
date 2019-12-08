@@ -1,0 +1,23 @@
+.btn-container {
+    position: absolute;
+    width: 110px;
+    height: 43px;
+    bottom: -23px;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    background: #1a73e8;
+    border-radius: 20px;
+    padding: 4px;
+    padding-top: 7px;
+}
+
+.btn-container:hover {
+    box-shadow: 1px 3px 5px #bfbfbf;
+    cursor: pointer;
+}
+
+.search-text {
+    color: #ffffff;
+    padding: 4px;
+    margin-left: 2px;
+}
